@@ -2,21 +2,17 @@ name: Build
 on:
   pull_request:
   workflow_dispatch:
-    
+
 jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       - name: Build
 
         run: |
           npm install
-          #npm run lint
-
+          npm run lint
           npm run build
-      - name: log
-        run: |
-          cat /home/runner/.npm/_logs/*.log
