@@ -160,13 +160,12 @@ class VacuumCard extends LitElement {
     siid = -1
     aiid = -1
     options = {}
-    
+
 
     switch (service) {
       case 'set_fan_speed':
         service_miot='set_miot_property'
         options = { 
-          /*fan_speed,*/
           siid = 2,
           aiid = 6,
           value = 1
@@ -174,35 +173,30 @@ class VacuumCard extends LitElement {
 
       case 'pause':
         options = { 
-          /*fan_speed,*/
           siid = 2,
           aiid = 2
          }
 
       case 'stop':
         options = { 
-          /*fan_speed,*/
           siid = 13,
           aiid = 1
          }
 
       case 'return_to_base':
         options = { 
-          /*fan_speed,*/
           siid = 13,
           aiid = 1
          }
 
       case 'start':
         options = { 
-          /*fan_speed,*/
           siid = 2,
           aiid = 1
          }
 
       case 'locate':
         options = { 
-          /*fan_speed,*/
           siid = 6,
           aiid = 1
          }
