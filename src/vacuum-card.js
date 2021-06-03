@@ -158,6 +158,8 @@ class VacuumCard extends LitElement {
     var domain = 'xiaomi_miot_raw';
     var service_miot = 'call_action';
 
+
+
     var options = {};
 
     switch (service) {
