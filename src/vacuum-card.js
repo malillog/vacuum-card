@@ -160,6 +160,7 @@ class VacuumCard extends LitElement {
     siid = -1
     aiid = -1
     options = {}
+    
 
     switch (service) {
       case 'set_fan_speed':
