@@ -149,13 +149,64 @@ class VacuumCard extends LitElement {
     );
   }
 
-  handleSpeed(e) {
-    const fan_speed = e.target.getAttribute('value');
-    this.callService('set_fan_speed', false, { fan_speed });
+  handleSpeed(/*e*/) {
+    // const fan_speed = e.target.getAttribute('value');
+    this.callService('set_fan_speed', false, 1);
   }
 
-  callService(service, isRequest = true, options = {}) {
-    this.hass.callService('vacuum', service, {
+  callService(service, isRequest = true, value = 1) {
+    var domain = 'xiaomi_miot_raw';
+    var service_miot = 'call_action';
+
+    var options = {};
+
+    switch (service) {
+      case 'set_fan_speed':
+        service_miot = 'set_miot_property';
+        options = {
+          siid: 2,
+          aiid: 6,
+          value: value,
+        };
+        break;
+
+      case 'pause':
+        options = {
+          siid: 2,
+          aiid: 2,
+        };
+        break;
+
+      case 'stop':
+        options = {
+          siid: 13,
+          aiid: 1,
+        };
+        break;
+
+      case 'return_to_base':
+        options = {
+          siid: 13,
+          aiid: 1,
+        };
+        break;
+
+      case 'start':
+        options = {
+          siid: 2,
+          aiid: 1,
+        };
+        break;
+
+      case 'locate':
+        options = {
+          siid: 6,
+          aiid: 1,
+        };
+        break;
+    }
+
+    this.hass.callService(domain, service_miot, {
       entity_id: this.config.entity,
       ...options,
     });
