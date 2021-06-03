@@ -149,58 +149,62 @@ class VacuumCard extends LitElement {
     );
   }
 
-  handleSpeed(e) {
-    const fan_speed = e.target.getAttribute('value');
-    this.callService('set_fan_speed', false);
+  handleSpeed(/*e*/) {
+    // const fan_speed = e.target.getAttribute('value');
+    this.callService('set_fan_speed', false, 1);
   }
 
-  callService(service, isRequest = true) {
-    domain = 'xiaomi_miot_raw'
-    service_miot = 'call_action'
-    siid = -1
-    aiid = -1
-    options = {}
+  callService(service, isRequest = true, value = 1) {
+    var domain = 'xiaomi_miot_raw';
+    var service_miot = 'call_action';
 
+    var options = {};
 
     switch (service) {
       case 'set_fan_speed':
-        service_miot='set_miot_property'
-        options = { 
-          siid = 2,
-          aiid = 6,
-          value = 1
-         }
+        service_miot = 'set_miot_property';
+        options = {
+          siid: 2,
+          aiid: 6,
+          value: value,
+        };
+        break;
 
       case 'pause':
-        options = { 
-          siid = 2,
-          aiid = 2
-         }
+        options = {
+          siid: 2,
+          aiid: 2,
+        };
+        break;
 
       case 'stop':
-        options = { 
-          siid = 13,
-          aiid = 1
-         }
+        options = {
+          siid: 13,
+          aiid: 1,
+        };
+        break;
 
       case 'return_to_base':
-        options = { 
-          siid = 13,
-          aiid = 1
-         }
+        options = {
+          siid: 13,
+          aiid: 1,
+        };
+        break;
 
       case 'start':
-        options = { 
-          siid = 2,
-          aiid = 1
-         }
+        options = {
+          siid: 2,
+          aiid: 1,
+        };
+        break;
 
       case 'locate':
-        options = { 
-          siid = 6,
-          aiid = 1
-         }
-
+        options = {
+          siid: 6,
+          aiid: 1,
+        };
+        break;
+    }
 
     this.hass.callService(domain, service_miot, {
       entity_id: this.config.entity,
