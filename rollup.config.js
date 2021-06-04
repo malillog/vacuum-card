@@ -20,7 +20,7 @@ const serverOptions = {
 };
 
 export default {
-  input: 'src/vacuum-card.js',
+  input: 'src/vacuum-card-miot',
   output: {
     dir: 'dist',
     format: 'es',
