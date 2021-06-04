@@ -236,4 +236,4 @@ export class VacuumCardEditor extends LitElement {
   }
 }
 
-customElements.define('vacuum-card-editor', VacuumCardEditor);
+customElements.define('vacuum-card-miot-editor', VacuumCardEditor);

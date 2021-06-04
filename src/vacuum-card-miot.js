@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit-element';
 import { hasConfigOrEntityChanged, fireEvent } from 'custom-card-helpers';
 import get from 'lodash.get';
-import './vacuum-card-editor';
+import './vacuum-card-miot-editor';
 import localize from './localize';
 import styles from './styles';
 import defaultImage from './vacuum.png';
@@ -27,7 +27,7 @@ class VacuumCard extends LitElement {
   }
 
   static async getConfigElement() {
-    return document.createElement('vacuum-card-editor');
+    return document.createElement('vacuum-card-miot-editor');
   }
 
   static getStubConfig(hass, entities) {
@@ -174,8 +174,8 @@ class VacuumCard extends LitElement {
 
       case 'pause':
         options = {
-          siid: 2,
-          aiid: 2,
+          siid: 13,
+          aiid: 1,
         };
         break;
 
@@ -525,12 +525,12 @@ class VacuumCard extends LitElement {
   }
 }
 
-customElements.define('vacuum-card', VacuumCard);
+customElements.define('vacuum-card-miot', VacuumCard);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
   preview: true,
-  type: 'vacuum-card',
+  type: 'vacuum-card-miot',
   name: localize('common.name'),
   description: localize('common.description'),
 });

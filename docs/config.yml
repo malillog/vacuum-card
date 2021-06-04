@@ -1,0 +1,75 @@
+type: 'custom:vacuum-card-miot'
+entity: vacuum.v2_5ce50cd0097f
+image: default
+compact_view: false
+show_name: true
+show_status: true
+show_toolbar: true
+stats:
+  default:
+    - attribute: vacuum_status
+      unit: null
+      subtitle: status
+    - attribute: filter_filter_life_level
+      unit: '%'
+      subtitle: Filter life
+    - attribute: filter_filter_left_time
+      unit: m
+      subtitle: Filter Life time
+    - attribute: vacuum_mode
+      unit: null
+      subtitle: Mode
+    - attribute: vacuum_target_water_level
+      unit: null
+      subtitle: Water
+    - attribute: vacuum_speed
+      unit: null
+      subtitle: Speed
+  cleaning:
+    - attribute: fan_speed
+      unit: null
+      subtitle: fan speed
+    - attribute: vacuum_mode
+      unit: null
+      subtitle: Mode
+    - attribute: cleaning_time
+      unit: minutes
+      subtitle: Cleaning time
+  docked:
+    - attribute: vacuum_status
+      unit: null
+      subtitle: status
+    - attribute: filter_filter_life_level
+      unit: '%'
+      subtitle: Filter life
+    - attribute: filter_filter_left_time
+      unit: m
+      subtitle: Filter Life time
+    - attribute: vacuum_mode
+      unit: null
+      subtitle: Mode
+    - attribute: vacuum_target_water_level
+      unit: null
+      subtitle: Water
+    - attribute: vacuum_speed
+      unit: null
+      subtitle: Speed
+actions:
+  - name: play
+    service: script.Aspirador_vacuum_start_sweep
+    icon: 'mdi:play'
+  - name: pause
+    service: script.Aspirador_vacuum_stop_sweep
+    icon: 'mdi:pause'
+  - name: to charge
+    service: script.aspirador_go_charging_start_charging
+    icon: 'mdi:stop'
+  - name: not return
+    service: script.aspirador_go_charging_stop_charging
+    icon: 'mdi:cancel'
+  - name: identify
+    service: script.aspirador_identify_identify
+    icon: 'mdi:robot-vacuum'
+  - name: charge
+    service: script.aspirador_vacuum_start_charge
+    icon: 'mdi:battery-charging-60'

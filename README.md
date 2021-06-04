@@ -10,7 +10,7 @@
 
 By default, Home Assistant does not provide any card for controlling vacuum cleaners. This card displays the state and allows to control your robot.
 
-![Preview of vacuum-card][preview-image]
+![Preview of vacuum-card-miot-miot][preview-image]
 
 ## Installing
 
@@ -34,18 +34,18 @@ Just search for `Vacuum Card` in plugins tab.
 
 ### Manual
 
-1. Download `vacuum-card.js` file from the [latest-release].
-2. Put `vacuum-card.js` file into your `config/www` folder.
-3. Add reference to `vacuum-card.js` in Lovelace. There's two way to do that:
-   1. **Using UI:** _Configuration_ → _Lovelace Dashboards_ → _Resources Tab_ → Click Plus button → Set _Url_ as `/local/vacuum-card.js` → Set _Resource type_ as `JavaScript Module`.
+1. Download `vacuum-card-miot-miot.js` file from the [latest-release].
+2. Put `vacuum-card-miot-miot.js` file into your `config/www` folder.
+3. Add reference to `vacuum-card-miot-miot.js` in Lovelace. There's two way to do that:
+   1. **Using UI:** _Configuration_ → _Lovelace Dashboards_ → _Resources Tab_ → Click Plus button → Set _Url_ as `/local/vacuum-card-miot-miot.js` → Set _Resource type_ as `JavaScript Module`.
       **Note:** If you do not see the Resources Tab, you will need to enable _Advanced Mode_ in your _User Profile_
    2. **Using YAML:** Add following code to `lovelace` section.
       ```yaml
       resources:
-        - url: /local/vacuum-card.js
+        - url: /local/vacuum-card-miot.js
           type: module
       ```
-4. Add `custom:vacuum-card` to Lovelace UI as any other card (using either editor or YAML configuration).
+4. Add `custom:vacuum-card-miot` to Lovelace UI as any other card (using either editor or YAML configuration).
 
 ## Using the card
 
@@ -63,7 +63,7 @@ _Sorry, no support for `actions` and `stats` in visual config yet._
 Typical example of using this card in YAML config would look like this:
 
 ```yaml
-type: 'custom:vacuum-card'
+type: 'custom:vacuum-card-miot'
 entity: vacuum.vacuum_cleaner
 stats:
   default:
@@ -102,7 +102,7 @@ Here is what every option means:
 
 | Name           |   Type    | Default      | Description                                                             |
 | -------------- | :-------: | ------------ | ----------------------------------------------------------------------- |
-| `type`         | `string`  | **Required** | `custom:vacuum-card`                                                    |
+| `type`         | `string`  | **Required** | `custom:vacuum-card-miot`                                                    |
 | `entity`       | `string`  | **Required** | An entity_id within the `vacuum` domain.                                |
 | `map`          | `string`  | Optional     | An entity_id within the `camera` domain, for streaming live vacuum map. |
 | `map_refresh`  | `integer` | `5`          | Update interval for map camera in seconds                               |
@@ -232,8 +232,8 @@ MIT © [Denys Dovhan][denysdovhan]
 
 <!-- Badges -->
 
-[npm-url]: https://npmjs.org/package/vacuum-card
-[npm-image]: https://img.shields.io/npm/v/vacuum-card.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/vacuum-card-miot
+[npm-image]: https://img.shields.io/npm/v/vacuum-card-miot.svg?style=flat-square
 [hacs-url]: https://github.com/custom-components/hacs
 [hacs-image]: https://img.shields.io/badge/hacs-default-orange.svg?style=flat-square
 [patreon-url]: https://patreon.com/denysdovhan
@@ -250,10 +250,10 @@ MIT © [Denys Dovhan][denysdovhan]
 [preview-image]: https://user-images.githubusercontent.com/3459374/83282788-c9e30280-a1e2-11ea-8e13-6208169ddc0a.png
 [cleaning-gif]: https://user-images.githubusercontent.com/3459374/81119202-fa60b500-8f32-11ea-9b23-325efa93d7ab.gif
 [returning-gif]: https://user-images.githubusercontent.com/3459374/81119452-765afd00-8f33-11ea-9dc5-9c26ba3f8c45.gif
-[latest-release]: https://github.com/denysdovhan/vacuum-card/releases/latest
+[latest-release]: https://github.com/denysdovhan/vacuum-card-miot/releases/latest
 [ha-scripts]: https://www.home-assistant.io/docs/scripts/
-[edit-readme]: https://github.com/denysdovhan/vacuum-card/edit/master/README.md
-[add-translation]: https://github.com/denysdovhan/vacuum-card/blob/master/CONTRIBUTING.md#how-to-add-translation
+[edit-readme]: https://github.com/denysdovhan/vacuum-card-miot/edit/master/README.md
+[add-translation]: https://github.com/denysdovhan/vacuum-card-miot/blob/master/CONTRIBUTING.md#how-to-add-translation
 [macbury-smart-house]: https://macbury.github.io/SmartHouse/HomeAssistant/Vacuum/
 [bbbenji-card]: https://gist.github.com/bbbenji/24372e423f8669b2e6713638d8f8ceb2
 [denysdovhan]: https://denysdovhan.com
