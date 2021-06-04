@@ -1,0 +1,72 @@
+{
+    "vacuum": {
+      "status": {
+        "siid": 2,
+        "piid": 1
+      },
+      "fault": {
+        "siid": 2,
+        "piid": 2
+      },
+      "mode": {
+        "siid": 2,
+        "piid": 4
+      },
+      "target_water_level": {
+        "siid": 2,
+        "piid": 5
+      },
+      "speed": {
+        "siid": 2,
+        "piid": 6
+      }
+    },
+    "filter": {
+      "filter_life_level": {
+        "siid": 11,
+        "piid": 1
+      },
+      "filter_left_time": {
+        "siid": 11,
+        "piid": 2
+      }
+    },
+    "a_l": {
+      "vacuum_start_sweep": {
+        "siid": 2,
+        "aiid": 1
+      },
+      "vacuum_stop_sweeping": {
+        "siid": 2,
+        "aiid": 2
+      },
+      "vacuum_start_charge": {
+        "siid": 2,
+        "aiid": 3
+      },
+      "identify_identify": {
+        "siid": 6,
+        "aiid": 1
+      },
+      "filter_reset_filter_life": {
+        "siid": 11,
+        "aiid": 1
+      },
+      "brush_cleaner_reset_brush_life": {
+        "siid": 14,
+        "aiid": 1
+      },
+      "brush_cleaner_2_reset_brush_life": {
+        "siid": 15,
+        "aiid": 1
+      },
+      "go_charging_start_charging": {
+        "siid": 13,
+        "aiid": 1
+      },
+      "go_charging_stop_charging": {
+        "siid": 13,
+        "aiid": 2
+      }
+    }
+  }

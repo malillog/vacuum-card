@@ -1,0 +1,71 @@
+{
+    "vacuum": {
+      "fault": {
+        "No Faults": 0,
+        "Left-wheel-error": 1,
+        "Right-whelel-error": 2,
+        "Cliff-error": 3,
+        "Low-battery-error": 4,
+        "Bump-error": 5,
+        "Main-brush-error": 6,
+        "Side-brush-error": 7,
+        "Fan-motor-error": 8,
+        "Dustbin-error": 9,
+        "Charging-error": 10,
+        "No-wate-error": 11,
+        "Pick-up-error": 12
+      },
+      "speed": {
+        "Silence": 0,
+        "Stanrd": 1,
+        "Middle": 2,
+        "Enchance": 3
+      },
+      "mode": {
+        "Auto-clean": 1,
+        "Spot-clean": 2,
+        "Wallflow-clean": 3
+      },
+      "status": {
+        "Idle": 1,
+        "Sweeping": 2,
+        "Paused": 3,
+        "Error": 4,
+        "Charging": 5,
+        "Go Charging": 6
+      },
+      "target_water_level": {
+        "access": 7,
+        "format": "uint8",
+        "unit": null,
+        "value_list": {
+          "Level1": 1,
+          "Level2": 2,
+          "Level3": 3
+        }
+      },
+      "main": true
+    },
+    "filter": {
+      "filter_life_level": {
+        "access": 5,
+        "format": "uint8",
+        "unit": "percentage",
+        "value_range": [
+          0,
+          100,
+          1
+        ]
+      },
+      "filter_left_time": {
+        "access": 5,
+        "format": "uint16",
+        "unit": "minutes",
+        "value_range": [
+          0,
+          18000,
+          1
+        ]
+      }
+    }
+  }
