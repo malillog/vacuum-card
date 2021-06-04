@@ -17,7 +17,7 @@ Only native speaker can translate to specific language.
 
 1. Clone this repo to wherever you want:
    ```sh
-   git clone https://github.com/denysdovhan/vacuum-card-miot.git
+   git clone https://github.com/malillog/vacuum-card-miot.git
    ```
 2. Go into the repo folder:
    ```sh

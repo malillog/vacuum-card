@@ -2,7 +2,7 @@
   "name": "vacuum-card-miot",
   "version": "1.24.0",
   "description": "Vacuum miot cleaner card for Home Assistant Lovelace UI",
-  "main": "dist/vacuum-card.js",
+  "main": "dist/vacuum-card-miot.js",
   "scripts": {
     "postpublish": "git push --follow-tags",
     "start": "rollup -c --watch",
@@ -66,8 +66,8 @@
         {
           "assets": [
             {
-              "path": "dist/vacuum-card.js",
-              "label": "vacuum-card.js"
+              "path": "dist/vacuum-card-miot.js",
+              "label": "vacuum-card-miot.js"
             }
           ]
         }
